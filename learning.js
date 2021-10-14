@@ -13,18 +13,14 @@ process.stdin.on('data', function (chunk) {
 }).on('end', function () {
     var lines = stdin.trim().split('\n');
     for (var i = 0; i<lines.length; i++){
-        // process.stdout.write("" + lines[i] * lines[i] + '\n');
         // square(lines[i]);
         fibonacci(lines);
     }
 })
 
-
 function square(num) {
     process.stdout.write("" + num * num + '\n');
 }
-
-
 
 function fibonacci(num) {
     let num1 = 0;
@@ -35,5 +31,5 @@ function fibonacci(num) {
         num1 = num2;
         num2 = num3;
     }
-    process.stdout.write("" + num3 + '\n');
+    process.stdout.write("" + num3);
 }
